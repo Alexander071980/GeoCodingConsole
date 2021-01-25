@@ -1,4 +1,5 @@
 ﻿using System;
+using GeoCodingLib;
 
 namespace GeoCodingConsole
 {
@@ -6,6 +7,7 @@ namespace GeoCodingConsole
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Hello World!");
         }
     }

@@ -5,18 +5,18 @@ using System.Text.RegularExpressions;
 
 namespace GeoCodingLib
 {
-    class Sector : Point
-    {
+    public class Sector : Point
+    {      
         public string SectorString { get; set; }
         public double DistanceMax { get; }
-        public int WidthSec { get; set; }
-        public int AzimuthSec { get; set; }
+        public int WidthSec { get; }
+        public int AzimuthSec { get; }
         public int AzStart { get; set; }
         public int AzEnd { get; set; }
         public int AzDelta { get; set; }
-        public string Errors { get; set; }
-        public Sector(double lat, double lon, string sectorString, double distanceMax)
-            : base(lat, lon)
+        public string Errors { get; }
+        public Sector(string number, string adress, double lat, double lon, string sectorString, double distanceMax)
+            : base(number, adress, lat, lon)
         {
             SectorString = sectorString;
             DistanceMax = distanceMax;
@@ -25,8 +25,8 @@ namespace GeoCodingLib
                 Errors = "Ошибка в поле сектор";
             }
         }
-        public Sector(double lat, double lon, int azimuthSec, int widthSec, double distanceMax)
-           : base(lat, lon)
+        public Sector(string number, string adress, double lat, double lon, int azimuthSec, int widthSec, double distanceMax)
+           : base(number, adress, lat, lon)
         {
             DistanceMax = distanceMax;
             WidthSec = widthSec;

@@ -5,12 +5,14 @@ using Geodesy;
 
 namespace GeoCodingLib
 {
-    class Point
+    public class Point
     {
         private readonly GeodeticCalculator geoCalc = new GeodeticCalculator(Ellipsoid.WGS84);
         public double Lat { get; }
         public double Lon { get; }
-        
+        public string Number { get; }
+        public string Adress { get; }
+
         public GlobalCoordinates LatLon
         {
             get
@@ -21,8 +23,10 @@ namespace GeoCodingLib
             }
         }
 
-        public Point(double lat, double lon)
-        {            
+        public Point(string number, string adress, double lat, double lon)
+        {
+            Number = number;
+            Adress = adress;
             Lat = lat;
             Lon = lon;
         }
