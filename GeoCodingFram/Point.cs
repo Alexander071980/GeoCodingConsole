@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using Geodesy;
 
-namespace GeoCodingLib
+namespace GeoCodingFram
 {
     public class Point
     {
         private readonly GeodeticCalculator geoCalc = new GeodeticCalculator(Ellipsoid.WGS84);
         public string Name { get; set; }
-        public double Lat { get; set; }
-        public double Lon { get; set; }
+        public double Lat { get; }
+        public double Lon { get; }
         public string Number { get; }
         public string Adress { get; }
 

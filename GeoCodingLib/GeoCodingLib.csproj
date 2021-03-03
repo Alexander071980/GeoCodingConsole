@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Geodesy" Version="4.0.0" />
+    <PackageReference Include="Geodesy" Version="4.1.0" />
+    <PackageReference Include="SharpKml.Core" Version="5.2.0" />
   </ItemGroup>
 
 </Project>
